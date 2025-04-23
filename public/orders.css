@@ -1,0 +1,390 @@
+/* Orders Page Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F3E9;
+    margin: 0;
+    padding: 0;
+}
+
+.orders-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.orders-title {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+.change-account-btn {
+    background-color: #FF6A28;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: static;
+    margin-left: 20px;
+}
+
+.change-account-btn:hover {
+    background-color: #e85a1e;
+}
+
+/* Order Card */
+.order-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+/* Top Section - Hotel Info and Action Buttons */
+.order-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.hotel-info {
+    flex: 1;
+}
+
+.hotel-name {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.hotel-location {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.order-price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #FF6A28;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.share-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.share-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.download-btn, .cancel-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.download-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.download-btn:hover {
+    background-color: #388E3C;
+}
+
+.cancel-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Reservation Details Section */
+.reservation-details {
+    display: flex;
+    padding: 0;
+}
+
+/* Dates Section */
+.dates-section {
+    width: 220px;
+    background-color: #f5f9f5;
+    padding: 20px;
+}
+
+.check-in-date, .check-out-date {
+    padding: 15px 0;
+}
+
+.check-in-date {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.date-box h3 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.date-box p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Guest Details Section */
+.guest-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.guest-room-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.guest-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guest-avatar {
+    font-size: 30px;
+}
+
+.guest-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.room-details {
+    text-align: right;
+}
+
+.room-type {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Time Details */
+.time-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.check-time, .room-number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.time-icon {
+    color: #4CAF50;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.time-value {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Reservation Number Section */
+.reservation-number-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.reservation-number {
+    display: flex;
+    flex-direction: column;
+}
+
+.res-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.res-value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.barcode {
+    display: flex;
+    align-items: center;
+}
+
+.barcode img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Cancelled Order State */
+.order-card.cancelled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.order-card.cancelled .order-top-section::after {
+    content: "CANCELLED";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff0000;
+    border: 5px solid #ff0000;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .order-top-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .order-actions {
+        width: 100%;
+        margin-top: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation-details {
+        flex-direction: column;
+    }
+    
+    .dates-section {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .guest-room-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .room-details {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .reservation-number-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .barcode {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .action-buttons {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .orders-title {
+        font-size: 24px;
+    }
+    
+    .time-details {
+        flex-direction: column;
+    }
+    
+    .check-time, .room-number {
+        min-width: 100%;
+    }
+    
+    .action-buttons {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+} 

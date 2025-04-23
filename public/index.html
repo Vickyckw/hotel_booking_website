@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <button class="change-account-btn" onclick="window.location.href='login.html'">Change Account</button>
+        
+        <div class="title-section">
+            <h1>Online Hotel <br> Booking System</h1>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location</span>
+                    </div>
+                    <input type="text" class="search-input" placeholder="Type in the location">
+                </div>
+
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-bed"></i>
+                        <span>Rooms</span>
+                    </div>
+                    <select class="search-select">
+                        <option value="" disabled selected>Choose the room number</option>
+                        <option value="1">1 Room</option>
+                        <option value="2">2 Rooms</option>
+                        <option value="3">3 Rooms</option>
+                        <option value="4">4 Rooms</option>
+                        <option value="5">5+ Rooms</option>
+                    </select>
+                </div>
+
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Check-in</span>
+                    </div>
+                    <div class="date-input-wrapper">
+                        <input type="text" class="date-input" placeholder="Year/Month/Day" readonly>
+                        <i class="fas fa-calendar-alt"></i>
+                        
+                        <!-- Date Picker Popup -->
+                        <div class="date-picker">
+                            <div class="date-picker-header">
+                                <div class="month-selector">
+                                    <span class="current-month">2025 April</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="navigation-buttons">
+                                    <button class="prev-month"><i class="fas fa-chevron-up"></i></button>
+                                    <button class="next-month"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="weekdays">
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                                <div>Sun</div>
+                            </div>
+                            
+                            <div class="days">
+                                <div class="prev-month-day">31</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div class="selected">19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div class="next-month-day">1</div>
+                                <div class="next-month-day">2</div>
+                                <div class="next-month-day">3</div>
+                                <div class="next-month-day">4</div>
+                                <div class="next-month-day">5</div>
+                                <div class="next-month-day">6</div>
+                                <div class="next-month-day">7</div>
+                                <div class="next-month-day">8</div>
+                                <div class="next-month-day">9</div>
+                                <div class="next-month-day">10</div>
+                                <div class="next-month-day">11</div>
+                            </div>
+                            
+                            <div class="date-picker-actions">
+                                <button class="clear-date">Clear</button>
+                                <button class="today-date">Today</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-calendar-times"></i>
+                        <span>Check-out</span>
+                    </div>
+                    <div class="date-input-wrapper">
+                        <input type="text" class="date-input" placeholder="Year/Month/Day" readonly>
+                        <i class="fas fa-calendar-alt"></i>
+                        
+                        <!-- Date Picker Popup -->
+                        <div class="date-picker">
+                            <div class="date-picker-header">
+                                <div class="month-selector">
+                                    <span class="current-month">2025 April</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="navigation-buttons">
+                                    <button class="prev-month"><i class="fas fa-chevron-up"></i></button>
+                                    <button class="next-month"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="weekdays">
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                                <div>Sun</div>
+                            </div>
+                            
+                            <div class="days">
+                                <div class="prev-month-day">31</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div class="selected">19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div class="next-month-day">1</div>
+                                <div class="next-month-day">2</div>
+                                <div class="next-month-day">3</div>
+                                <div class="next-month-day">4</div>
+                                <div class="next-month-day">5</div>
+                                <div class="next-month-day">6</div>
+                                <div class="next-month-day">7</div>
+                                <div class="next-month-day">8</div>
+                                <div class="next-month-day">9</div>
+                                <div class="next-month-day">10</div>
+                                <div class="next-month-day">11</div>
+                            </div>
+                            
+                            <div class="date-picker-actions">
+                                <button class="clear-date">Clear</button>
+                                <button class="today-date">Today</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>search</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="building-image"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

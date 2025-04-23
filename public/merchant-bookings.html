@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings Management - Online Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="merchant.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add required libraries for PDF and Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="merchant-bookings.js" defer></script>
+</head>
+<body>
+    <div class="merchant-container">
+        <!-- Header with title and account button -->
+        <header class="merchant-header">
+            <h1 class="merchant-title">Bookings Management</h1>
+            <button class="change-account-btn" onclick="window.location.href='login.html'">Change Account</button>
+        </header>
+
+        <!-- Navigation menu -->
+        <div class="merchant-nav">
+            <a href="merchant-hotel.html" class="nav-item">
+                <i class="fas fa-hotel"></i>
+                <span>Hotel Info</span>
+            </a>
+            <a href="merchant-bookings.html" class="nav-item active">
+                <i class="fas fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+        </div>
+
+        <!-- Bookings Filter Section -->
+        <div class="bookings-filter">
+            <div class="filter-group">
+                <label for="statusFilter">Status</label>
+                <select id="statusFilter">
+                    <option value="all">All Bookings</option>
+                    <option value="confirmed">Confirmed</option>
+                    <option value="pending">Pending Payment</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="dateFilter">Date Range</label>
+                <select id="dateFilter">
+                    <option value="all">All Time</option>
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month" selected>This Month</option>
+                    <option value="custom">Custom Range</option>
+                </select>
+            </div>
+            <div class="filter-group search-group">
+                <label for="searchBooking">Search</label>
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchBooking" placeholder="Booking ID, Guest Name...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bookings Summary Cards -->
+        <div class="bookings-summary">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="summary-info">
+                    <h3>Total Bookings</h3>
+                    <p class="summary-value">84</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon confirmed">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="summary-info">
+                    <h3>Confirmed</h3>
+                    <p class="summary-value">32</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon pending">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="summary-info">
+                    <h3>Pending</h3>
+                    <p class="summary-value">15</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon completed">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <div class="summary-info">
+                    <h3>Completed</h3>
+                    <p class="summary-value">30</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon cancelled">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <div class="summary-info">
+                    <h3>Cancelled</h3>
+                    <p class="summary-value">7</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Export and Print buttons -->
+        <div class="action-buttons">
+            <button class="action-btn export-btn" onclick="exportToExcel()">
+                <i class="fas fa-file-excel"></i>
+                Export to Excel
+            </button>
+            <button class="action-btn print-btn" onclick="printBookings()">
+                <i class="fas fa-print"></i>
+                Print Report
+            </button>
+        </div>
+
+        <!-- Bookings Table -->
+        <div class="bookings-table-section">
+            <div class="section-header">
+                <h2>Booking List</h2>
+            </div>
+            <div class="bookings-table-container">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="bookingsTable">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Guest Name</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Room Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Payment</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingListBody">
+                            <!-- Booking rows will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination and Items Per Page -->
+                <div class="table-footer">
+                    <div class="items-per-page">
+                        <label for="itemsPerPageSelect">Items per page:</label>
+                        <select id="itemsPerPageSelect">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="all">All</option> 
+                        </select>
+                    </div>
+                    <div class="pagination">
+                        <button class="pagination-btn prev" onclick="handlePaginationClick('prev')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <!-- Page number buttons will be dynamically inserted here -->
+                        <button class="pagination-btn next" onclick="handlePaginationClick('next')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

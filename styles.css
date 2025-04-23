@@ -1,0 +1,156 @@
+/* Styles for Date Picker Popup */
+.date-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.date-input {
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Add padding for icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.date-input-wrapper .fa-calendar-alt {
+    position: absolute;
+    right: 10px;
+    color: #666;
+    pointer-events: none; /* Allow clicks to pass through to input */
+}
+
+.date-picker {
+    position: absolute;
+    top: 100%; /* Default position below */
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 300px;
+    display: none; /* Hidden by default */
+    margin-top: 5px; /* Space below input */
+}
+
+/* === MODIFIED RULE FOR INDEX PAGE === */
+/* Increase specificity and ensure it overrides */
+.search-section .search-item .date-input-wrapper .date-picker {
+    top: auto !important; /* Override default top positioning */
+    bottom: 100% !important; /* Position above the wrapper */
+    margin-top: 0 !important; /* Remove top margin */
+    margin-bottom: 5px !important; /* Add space above input */
+}
+/* === END MODIFIED RULE === */
+
+.date-input-wrapper.active .date-picker {
+    display: block; /* Show when active */
+}
+
+.date-picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.month-selector {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.month-selector .fa-chevron-down {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.navigation-buttons button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    color: #333;
+}
+
+.navigation-buttons button:hover {
+    color: #007bff;
+}
+
+.navigation-buttons .prev-month .fa-chevron-up {
+    transform: rotate(-90deg); /* Point left */
+}
+
+.navigation-buttons .next-month .fa-chevron-down {
+    transform: rotate(90deg); /* Point right */
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.days div {
+    padding: 8px 0;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.days div:not(.prev-month-day):not(.next-month-day):hover {
+    background-color: #e9ecef;
+}
+
+.days div.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.days div.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.days div.prev-month-day,
+.days div.next-month-day {
+    color: #aaa;
+}
+
+.date-picker-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.date-picker-actions button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.date-picker-actions button:hover {
+    text-decoration: underline;
+} 

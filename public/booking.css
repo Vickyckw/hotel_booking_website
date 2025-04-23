@@ -1,0 +1,348 @@
+/* Booking Page Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F3E9;
+    margin: 0;
+    padding: 0;
+}
+
+.booking-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.booking-title {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 30px;
+    margin: 0 0 30px 0;
+    color: #333;
+}
+
+.booking-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left side content (2/3) */
+.booking-left {
+    flex: 2;
+    min-width: 300px;
+}
+
+.booking-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Room Info Section */
+.room-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.selected-room {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    max-width: 70%;
+}
+
+.room-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FF6A28;
+}
+
+.room-price span {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Hotel Brief Info */
+.hotel-brief {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.hotel-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #FF6A28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel-logo i {
+    font-size: 24px;
+    color: white;
+}
+
+.hotel-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-details {
+    flex: 1;
+}
+
+.hotel-name {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+}
+
+.hotel-location {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Stay Dates */
+.stay-dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check-date {
+    text-align: center;
+}
+
+.check-date h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.check-date p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.stay-icon {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Guest Information */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.room-count {
+    font-size: 14px;
+    color: #666;
+}
+
+.passport-info {
+    margin: 0 0 20px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.guest-info h3 {
+    font-size: 18px;
+    margin: 20px 0 15px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.required {
+    color: #FF6A28;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.phone-input {
+    display: flex;
+    gap: 10px;
+}
+
+.country-code {
+    width: 100px;
+}
+
+.country-code select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+/* Right side content (1/3) */
+.booking-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.summary-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.summary-hotel {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.summary-hotel-info h4 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+}
+
+.summary-hotel-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.price-details h3 {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.total-price {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.price-row.total {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.pay-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+    background-color: #388E3C;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .booking-content {
+        flex-direction: column;
+    }
+    
+    .booking-left, .booking-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .room-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .selected-room {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .stay-dates {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .stay-icon {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-title {
+        font-size: 24px;
+    }
+    
+    .hotel-brief {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hotel-logo {
+        margin-bottom: 10px;
+    }
+    
+    .summary-hotel {
+        flex-direction: column;
+    }
+} 

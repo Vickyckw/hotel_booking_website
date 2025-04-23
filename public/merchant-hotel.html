@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Hotel - Online Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="merchant.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="merchant-hotel.js" defer></script>
+</head>
+<body>
+    <div class="merchant-container">
+        <!-- Header with title and account button -->
+        <header class="merchant-header">
+            <h1 class="merchant-title">Manage Hotel Information</h1>
+            <button class="change-account-btn" onclick="window.location.href='login.html'">Change Account</button>
+        </header>
+
+        <!-- Navigation menu -->
+        <div class="merchant-nav">
+            <a href="merchant-hotel.html" class="nav-item active">
+                <i class="fas fa-hotel"></i>
+                <span>Hotel Info</span>
+            </a>
+            <a href="merchant-bookings.html" class="nav-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Bookings</span>
+            </a>
+        </div>
+
+        <!-- Hotel Basic Information Section -->
+        <div class="hotel-edit-section">
+            <div class="section-header">
+                <h2>Basic Information</h2>
+                <button class="edit-btn" id="basicInfoEditBtn">
+                    <i class="fas fa-pen"></i> Edit
+                </button>
+                <button class="save-btn" id="basicInfoSaveBtn" style="display: none;">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+            <div class="hotel-basic-info">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hotelName">Hotel Name</label>
+                        <input type="text" id="hotelName" value="CVK Park Bosphorus Hotel Istanbul" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="hotelStars">Star Rating</label>
+                        <select id="hotelStars" disabled>
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5" selected>5 Stars</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hotelLocation">Location</label>
+                        <input type="text" id="hotelLocation" value="Istanbul, Turkey" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="hotelAddress">Address</label>
+                        <input type="text" id="hotelAddress" value="Gümüşsuyu Mah. İnönü Cad. No:8, Istanbul 34437" disabled>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="hotelDescription">Description</label>
+                        <textarea id="hotelDescription" rows="4" disabled>Located in Taksim Gümüşuyu, the heart of Istanbul, the CVK Park Bosphorus Hotel Istanbul has risen from the ashes of the historic Park Hotel, which also served as Foreign Affairs Palace 120 years ago and is hosting its guests by assuming this hospitality mission.</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hotel Images Section -->
+        <div class="hotel-edit-section">
+            <div class="section-header">
+                <h2>Hotel Images</h2>
+                <button class="edit-btn" id="imagesEditBtn">
+                    <i class="fas fa-pen"></i> Edit
+                </button>
+                <button class="save-btn" id="imagesSaveBtn" style="display: none;">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+            <div class="hotel-images">
+                <div class="images-grid">
+                    <div class="image-item main-image">
+                        <img src="hotel.jpg" alt="Main Hotel Image">
+                        <div class="image-actions">
+                            <button class="image-action-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            <button class="image-action-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        <div class="image-label">Main Image</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="hotel1.jpg" alt="Hotel Image">
+                        <div class="image-actions">
+                            <button class="image-action-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            <button class="image-action-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <img src="hotel2.jpg" alt="Hotel Image">
+                        <div class="image-actions">
+                            <button class="image-action-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            <button class="image-action-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <img src="hotel3.jpg" alt="Hotel Image">
+                        <div class="image-actions">
+                            <button class="image-action-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            <button class="image-action-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="image-item add-image">
+                        <div class="add-image-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>Add Image</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Room Types Section -->
+        <div class="hotel-edit-section">
+            <div class="section-header">
+                <h2>Room Types</h2>
+                <button class="add-btn" id="addRoomTypeBtn">
+                    <i class="fas fa-plus"></i> Add Room Type
+                </button>
+            </div>
+            <div class="room-types-list">
+                <!-- Room Type 1 -->
+                <div class="room-type-item" data-id="room-1">
+                    <div class="room-type-header">
+                        <div class="room-type-title">
+                            <h3>Superior Room</h3>
+                            <span class="room-type-price">$240/night</span>
+                        </div>
+                        <div class="room-type-actions">
+                            <button class="edit-btn small">
+                                <i class="fas fa-pen"></i>
+                            </button>
+                            <button class="delete-btn small">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="room-type-details">
+                        <div class="room-type-image">
+                            <img src="hotel2.jpg" alt="Superior Room">
+                        </div>
+                        <div class="room-type-info">
+                            <p><strong>Description:</strong> 1 double bed or 2 twin beds</p>
+                            <p><strong>Capacity:</strong> 2 adults</p>
+                            <p><strong>Amenities:</strong> Free Wi-Fi, Air conditioning, TV, Safe</p>
+                            <div class="inventory-control">
+                                <label for="roomInventory1">Available Rooms:</label>
+                                <input type="number" id="roomInventory1" value="15" min="0">
+                                <button class="update-inventory-btn">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Type 2 -->
+                <div class="room-type-item" data-id="room-2">
+                    <div class="room-type-header">
+                        <div class="room-type-title">
+                            <h3>Superior Room with City View</h3>
+                            <span class="room-type-price">$280/night</span>
+                        </div>
+                        <div class="room-type-actions">
+                            <button class="edit-btn small">
+                                <i class="fas fa-pen"></i>
+                            </button>
+                            <button class="delete-btn small">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="room-type-details">
+                        <div class="room-type-image">
+                            <img src="hotel3.jpg" alt="Superior Room with City View">
+                        </div>
+                        <div class="room-type-info">
+                            <p><strong>Description:</strong> 1 double bed or 2 twin beds with city view</p>
+                            <p><strong>Capacity:</strong> 2 adults</p>
+                            <p><strong>Amenities:</strong> Free Wi-Fi, Air conditioning, TV, Safe, Mini bar</p>
+                            <div class="inventory-control">
+                                <label for="roomInventory2">Available Rooms:</label>
+                                <input type="number" id="roomInventory2" value="12" min="0">
+                                <button class="update-inventory-btn">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Type 3 -->
+                <div class="room-type-item" data-id="room-3">
+                    <div class="room-type-header">
+                        <div class="room-type-title">
+                            <h3>Deluxe Suite</h3>
+                            <span class="room-type-price">$350/night</span>
+                        </div>
+                        <div class="room-type-actions">
+                            <button class="edit-btn small">
+                                <i class="fas fa-pen"></i>
+                            </button>
+                            <button class="delete-btn small">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="room-type-details">
+                        <div class="room-type-image">
+                            <img src="hotel1.jpg" alt="Deluxe Suite">
+                        </div>
+                        <div class="room-type-info">
+                            <p><strong>Description:</strong> Spacious suite with living area and 1 king size bed</p>
+                            <p><strong>Capacity:</strong> 2 adults, 1 child</p>
+                            <p><strong>Amenities:</strong> Free Wi-Fi, Air conditioning, TV, Safe, Mini bar, Bathtub</p>
+                            <div class="inventory-control">
+                                <label for="roomInventory3">Available Rooms:</label>
+                                <input type="number" id="roomInventory3" value="8" min="0">
+                                <button class="update-inventory-btn">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,367 @@
+/* Hotel Details Page Styles */
+.details-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F6F3E9;
+}
+
+/* Header */
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.details-title {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+/* Section 1: Hotel Information */
+.hotel-info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hotel-main-info {
+    flex: 1;
+}
+
+.hotel-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.hotel-location {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.hotel-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hotel-rating, .hotel-distance {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.stars {
+    color: #FFD700;
+}
+
+.hotel-price {
+    text-align: right;
+    min-width: 150px;
+}
+
+.hotel-price .price-value {
+    font-size: 32px;
+    font-weight: 600;
+    color: #FF6A28;
+    margin: 0;
+}
+
+.hotel-price .price-value span {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+}
+
+/* Section 2: Hotel Gallery */
+.hotel-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-main {
+    height: 400px;
+    overflow: hidden;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-main img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 400px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* 給每個gallery-item的圖片不同的樣式 */
+.gallery-item:nth-child(1) img {
+    border-radius: 0 10px 0 0;
+    filter: brightness(1.1);
+}
+
+.gallery-item:nth-child(2) img {
+    border-radius: 0 0 0 0;
+    filter: contrast(1.1);
+}
+
+.gallery-item:nth-child(3) img {
+    border-radius: 0 0 0 0;
+    filter: saturate(1.2);
+}
+
+.gallery-item:nth-child(4) img {
+    border-radius: 0 0 10px 0;
+    filter: sepia(0.2);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Section 3: Hotel Overview */
+.hotel-overview {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hotel-overview h3 {
+    font-size: 22px;
+    margin: 0 0 15px 0;
+}
+
+.overview-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Section 4: Available Rooms */
+.available-rooms {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.available-rooms h3 {
+    font-size: 22px;
+    margin: 0 0 15px 0;
+}
+
+.rooms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-card {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.room-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.room-image {
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-details {
+    flex: 1;
+}
+
+.room-name {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    font-weight: 500;
+}
+
+.room-capacity {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.room-description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+}
+
+.room-amenities {
+    font-size: 14px;
+    color: #666;
+}
+
+.room-booking {
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.room-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FF6A28;
+    margin: 0 0 5px 0;
+}
+
+.room-price span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+}
+
+.rooms-available {
+    font-size: 14px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.book-now-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.book-now-btn:hover {
+    background-color: #388E3C;
+}
+
+.loading-room-data, .no-rooms {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .hotel-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-main {
+        height: 300px;
+    }
+    
+    .gallery-grid {
+        height: auto;
+        grid-template-rows: repeat(2, 150px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hotel-info-section {
+        flex-direction: column;
+    }
+    
+    .hotel-price {
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    .hotel-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .room-item {
+        flex-wrap: wrap;
+    }
+    
+    .room-image {
+        margin-bottom: 10px;
+    }
+    
+    .room-info {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .room-price {
+        text-align: left;
+        margin: 0 0 10px 0;
+    }
+    
+    .book-button {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .details-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 150px);
+    }
+} 

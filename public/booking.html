@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Online Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1 class="booking-title">Online Hotel Booking System</h1>
+        
+        <div class="booking-content">
+            <!-- Left side content (2/3) -->
+            <div class="booking-left">
+                <!-- Section 1: Hotel Information -->
+                <div class="booking-section">
+                    <div class="room-info">
+                        <h2 class="selected-room">Superior room - 1 double bed or 2 twin beds</h2>
+                        <div class="room-price">$240<span>/night</span></div>
+                    </div>
+                    
+                    <div class="hotel-brief">
+                        <div class="hotel-logo">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="hotel-details">
+                            <h3 class="hotel-name">CVK Park Bosphorus Hotel Istanbul</h3>
+                            <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Gümüşsuyu Mah. İnönü Cad. No:8, Istanbul 34437</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stay-dates">
+                        <div class="check-date">
+                            <h4>Thursday, Dec 8</h4>
+                            <p>Check-In</p>
+                        </div>
+                        <div class="stay-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="check-date">
+                            <h4>Friday, Dec 9</h4>
+                            <p>Check-Out</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 2: Guest Information -->
+                <div class="booking-section">
+                    <div class="section-header">
+                        <h3>Check-in info</h3>
+                        <span class="room-count">1 room</span>
+                    </div>
+                    <p class="passport-info">Just 1 passport needed</p>
+                    
+                    <div class="guest-info">
+                        <h3>Guest info</h3>
+                        <div class="form-group">
+                            <label for="first-name">First name <span class="required">*</span></label>
+                            <input type="text" id="first-name" placeholder="e.g. John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last name <span class="required">*</span></label>
+                            <input type="text" id="last-name" placeholder="e.g. Smith" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 3: Contact Information -->
+                <div class="booking-section">
+                    <h3>Contact info</h3>
+                    <div class="form-group">
+                        <label for="email">Email address <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="Please enter" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone number <span class="required">*</span></label>
+                        <div class="phone-input">
+                            <div class="country-code">
+                                <select id="phone-code">
+                                    <option value="+86">+86</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+61">+61</option>
+                                    <option value="+81">+81</option>
+                                </select>
+                            </div>
+                            <input type="tel" id="phone" placeholder="Please enter" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right side content (1/3) -->
+            <div class="booking-right">
+                <div class="summary-section">
+                    <div class="summary-hotel">
+                        <img src="hotel2.jpg" alt="Hotel Room" class="summary-image">
+                        <div class="summary-hotel-info">
+                            <h4>CVK Park Bosphorus Hotel Istanbul</h4>
+                            <p>Superior room - 1 double bed or 2 twin beds</p>
+                        </div>
+                    </div>
+                    
+                    <div class="price-details">
+                        <h3>Price Details</h3>
+                        <div class="price-row">
+                            <span>Base Fare</span>
+                            <span>$240</span>
+                        </div>
+                        <div class="price-row nights-display" style="color: #666; font-size: 0.9em;">
+                            <span>1 Night</span>
+                            <span></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Discount</span>
+                            <span>$0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Taxes</span>
+                            <span>$20</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Service Fee</span>
+                            <span>$5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="total-price">
+                        <div class="price-row total">
+                            <span>Total</span>
+                            <span>$265</span>
+                        </div>
+                    </div>
+                    
+                    <button class="pay-button" id="pay-btn">PAY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="booking.js"></script>
+</body>
+</html> 

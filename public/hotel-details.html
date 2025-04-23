@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hotel-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="details-container">
+        <!-- Header with title only -->
+        <header class="details-header">
+            <h1 class="details-title">Online Hotel Booking System</h1>
+        </header>
+
+        <!-- Section 1: Hotel Information -->
+        <div class="hotel-info-section">
+            <div class="hotel-main-info">
+                <h2 class="hotel-name">HKBU Hotel</h2>
+                <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> <span>Loading address...</span></p>
+                <div class="hotel-details">
+                    <div class="hotel-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span>5.0</span>
+                    </div>
+                    <div class="hotel-distance">
+                        <i class="fas fa-location-arrow"></i>
+                        <span class="distance-text">Loading distance...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-price">
+                <p class="price-value">$240<span>/night</span></p>
+            </div>
+        </div>
+
+        <!-- Section 2: Hotel Images -->
+        <div class="hotel-gallery">
+            <div class="gallery-main">
+                <img src="hotel.jpg" alt="Hotel Main View">
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="hotel1.jpg" alt="Hotel Room">
+                </div>
+                <div class="gallery-item">
+                    <img src="hotel2.jpg" alt="Hotel Suite">
+                </div>
+                <div class="gallery-item">
+                    <img src="hotel3.jpg" alt="Hotel Bathroom">
+                </div>
+                <div class="gallery-item">
+                    <img src="hotel4.jpg" alt="Hotel Exterior">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Hotel Overview -->
+        <div class="hotel-overview">
+            <h3>Overview</h3>
+            <p class="overview-text">
+                Loading hotel description...
+            </p>
+        </div>
+
+        <!-- Section 4: Available Rooms -->
+        <div class="available-rooms">
+            <h3>Available Rooms</h3>
+            
+            <!-- 確保這個div存在並且class為rooms-container -->
+            <div class="rooms-container">
+                <!-- Room items will be dynamically inserted here -->
+                <div class="loading-room-data">Loading available rooms...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="hotel-details.js"></script>
+</body>
+</html> 

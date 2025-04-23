@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details - Online Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orders.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="orders-container">
+        <!-- Header with title and account button -->
+        <header class="orders-header">
+            <h1 class="orders-title">Online Hotel Booking System</h1>
+            <button class="change-account-btn" onclick="window.location.href='login.html'">Change Account</button>
+        </header>
+
+        <!-- Order details section -->
+        <div class="order-card">
+            <!-- Hotel info and action buttons -->
+            <div class="order-top-section">
+                <div class="hotel-info">
+                    <h2 class="hotel-name">CVK Park Bosphorus Hotel Istanbul</h2>
+                    <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Gümüşsuyu Mah. İnönü Cad. No:8, Istanbul 34437</p>
+                </div>
+                <div class="order-actions">
+                    <div class="order-price">$265</div>
+                    <div class="action-buttons">
+                        <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                        <button class="download-btn" id="download-btn">Download</button>
+                        <button class="cancel-btn" id="cancel-btn">Cancel & Refund</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservation details section -->
+            <div class="reservation-details">
+                <!-- Check-in and check-out dates -->
+                <div class="dates-section">
+                    <div class="check-in-date">
+                        <div class="date-box">
+                            <h3>Thursday, Dec 8</h3>
+                            <p>Check-In</p>
+                        </div>
+                    </div>
+                    <div class="check-out-date">
+                        <div class="date-box">
+                            <h3>Friday, Dec 9</h3>
+                            <p>Check-Out</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guest and room details -->
+                <div class="guest-details">
+                    <!-- Guest name and room type -->
+                    <div class="guest-room-section">
+                        <div class="guest-info">
+                            <div class="guest-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="guest-name">James Doe</div>
+                        </div>
+                        <div class="room-details">
+                            <p class="room-type">Superior room - 1 double bed or 2 twin beds</p>
+                        </div>
+                    </div>
+
+                    <!-- Check-in/out times and room number -->
+                    <div class="time-details">
+                        <div class="check-time">
+                            <div class="time-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="time-info">
+                                <span class="time-label">Check-in time</span>
+                                <span class="time-value">12:00pm</span>
+                            </div>
+                        </div>
+                        <div class="check-time">
+                            <div class="time-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="time-info">
+                                <span class="time-label">Check-Out time</span>
+                                <span class="time-value">11:30pm</span>
+                            </div>
+                        </div>
+                        <div class="room-number">
+                            <div class="time-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <div class="time-info">
+                                <span class="time-label">Room no.</span>
+                                <span class="time-value">On arrival</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reservation number and barcode -->
+                    <div class="reservation-number-section">
+                        <div class="reservation-number">
+                            <span class="res-label">Reservation Order Number</span>
+                            <span class="res-value">ABC123456789</span>
+                        </div>
+                        <div class="barcode">
+                            <img src="barcode.png" alt="Reservation Barcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="orders.js"></script>
+</body>
+</html> 

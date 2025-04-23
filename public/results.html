@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Search Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="results.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="results-container">
+        <!-- Section 1: Header with title and account button -->
+        <header class="results-header">
+            <h1 class="results-title">Online Hotel Booking System</h1>
+        </header>
+
+        <!-- Section 2: Search area with saved parameters -->
+        <div class="search-bar-section">
+            <div class="search-bar-container">
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location</span>
+                    </div>
+                    <input type="text" class="search-input" id="location-input" value="London, UK">
+                </div>
+
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Check-in</span>
+                    </div>
+                    <div class="date-input-wrapper">
+                        <input type="text" class="date-input" id="checkin-input" value="2025/04/19" readonly>
+                        <i class="fas fa-calendar-alt"></i>
+                        
+                        <!-- Date Picker Popup -->
+                        <div class="date-picker">
+                            <div class="date-picker-header">
+                                <div class="month-selector">
+                                    <span class="current-month">2025 April</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="navigation-buttons">
+                                    <button class="prev-month"><i class="fas fa-chevron-up"></i></button>
+                                    <button class="next-month"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="weekdays">
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                                <div>Sun</div>
+                            </div>
+                            
+                            <div class="days">
+                                <div class="prev-month-day">31</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div class="selected">19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div class="next-month-day">1</div>
+                                <div class="next-month-day">2</div>
+                                <div class="next-month-day">3</div>
+                                <div class="next-month-day">4</div>
+                                <div class="next-month-day">5</div>
+                                <div class="next-month-day">6</div>
+                                <div class="next-month-day">7</div>
+                                <div class="next-month-day">8</div>
+                                <div class="next-month-day">9</div>
+                                <div class="next-month-day">10</div>
+                                <div class="next-month-day">11</div>
+                            </div>
+                            
+                            <div class="date-picker-actions">
+                                <button class="clear-date">Clear</button>
+                                <button class="today-date">Today</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-calendar-times"></i>
+                        <span>Check-out</span>
+                    </div>
+                    <div class="date-input-wrapper">
+                        <input type="text" class="date-input" id="checkout-input" value="2025/04/25" readonly>
+                        <i class="fas fa-calendar-alt"></i>
+                        
+                        <!-- Date Picker Popup -->
+                        <div class="date-picker">
+                            <div class="date-picker-header">
+                                <div class="month-selector">
+                                    <span class="current-month">2025 April</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="navigation-buttons">
+                                    <button class="prev-month"><i class="fas fa-chevron-up"></i></button>
+                                    <button class="next-month"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="weekdays">
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                                <div>Sun</div>
+                            </div>
+                            
+                            <div class="days">
+                                <div class="prev-month-day">31</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div>19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div class="selected">25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div class="next-month-day">1</div>
+                                <div class="next-month-day">2</div>
+                                <div class="next-month-day">3</div>
+                                <div class="next-month-day">4</div>
+                                <div class="next-month-day">5</div>
+                                <div class="next-month-day">6</div>
+                                <div class="next-month-day">7</div>
+                                <div class="next-month-day">8</div>
+                                <div class="next-month-day">9</div>
+                                <div class="next-month-day">10</div>
+                                <div class="next-month-day">11</div>
+                            </div>
+                            
+                            <div class="date-picker-actions">
+                                <button class="clear-date">Clear</button>
+                                <button class="today-date">Today</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-item">
+                    <div class="search-label">
+                        <i class="fas fa-bed"></i>
+                        <span>Rooms</span>
+                    </div>
+                    <select class="search-select" id="rooms-select">
+                        <option value="1">1 Room</option>
+                        <option value="2" selected>2 Rooms</option>
+                        <option value="3">3 Rooms</option>
+                        <option value="4">4 Rooms</option>
+                        <option value="5">5+ Rooms</option>
+                    </select>
+                </div>
+
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>search</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Section 3: Sort options -->
+        <div class="sort-section">
+            <div class="sort-option">
+                <label for="price-sort">Price:</label>
+                <select id="price-sort" class="sort-select">
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                </select>
+            </div>
+            <div class="sort-option">
+                <label for="rating-sort">Rating:</label>
+                <select id="rating-sort" class="sort-select">
+                    <option value="high-to-low">High to Low</option>
+                    <option value="low-to-high">Low to High</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section 4: Results count -->
+        <div class="results-count">
+            <p>15 hotels found</p>
+        </div>
+
+        <!-- Section 5: Hotel listings -->
+        <div class="hotel-listings">
+            <!-- Hotel 1 -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel1.jpg" alt="The Grand Hotel">
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">The Grand Hotel</h3>
+                    <p class="hotel-location">Central London, UK</p>
+                    <div class="hotel-details">
+                        <div class="hotel-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span>4.5</span>
+                        </div>
+                        <div class="hotel-distance">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>0.5 km from center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-price">
+                    <p class="price-value">$180</p>
+                    <p class="price-night">per night</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+
+            <!-- Hotel 2 -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel2.jpg" alt="Riverside Suites">
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Riverside Suites</h3>
+                    <p class="hotel-location">Westminster, London</p>
+                    <div class="hotel-details">
+                        <div class="hotel-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span>4.0</span>
+                        </div>
+                        <div class="hotel-distance">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1.2 km from center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-price">
+                    <p class="price-value">$165</p>
+                    <p class="price-night">per night</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+
+            <!-- Hotel 3 -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel3.jpg" alt="Park View Hotel">
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Park View Hotel</h3>
+                    <p class="hotel-location">Hyde Park, London</p>
+                    <div class="hotel-details">
+                        <div class="hotel-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span>5.0</span>
+                        </div>
+                        <div class="hotel-distance">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>0.8 km from center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-price">
+                    <p class="price-value">$210</p>
+                    <p class="price-night">per night</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+
+            <!-- Hotel 4 -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel4.jpg" alt="City Center Inn">
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">City Center Inn</h3>
+                    <p class="hotel-location">Piccadilly, London</p>
+                    <div class="hotel-details">
+                        <div class="hotel-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span>3.0</span>
+                        </div>
+                        <div class="hotel-distance">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>0.3 km from center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-price">
+                    <p class="price-value">$120</p>
+                    <p class="price-night">per night</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+
+            <!-- Hotel 5 -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="hotel1.jpg" alt="The Royal Palace">
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">The Royal Palace</h3>
+                    <p class="hotel-location">Kensington, London</p>
+                    <div class="hotel-details">
+                        <div class="hotel-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span>4.5</span>
+                        </div>
+                        <div class="hotel-distance">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1.5 km from center</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-price">
+                    <p class="price-value">$195</p>
+                    <p class="price-night">per night</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html> 
